@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio - Works</title>
+    <link rel="stylesheet" href="portstyles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <!-- 🔹 Navbar -->
+    <nav>
+        <div class="nav-logo">MyPortfolio</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="works.html" class="active">Works</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- 🔹 Works Section -->
+    <section class="works">
+        <h2>My Works</h2>
+        <div class="works-grid">
+            <!-- Work 1 -->
+            <div class="work-item" onclick="openModal('modal1')">
+                <img src="https://via.placeholder.com/300x200/222/fff?text=HTML+Basics" alt="HTML Basics">
+                <h3>HTML Basics</h3>
+                <p>Click to see more details.</p>
+            </div>
+            <!-- Work 2 -->
+            <div class="work-item" onclick="openModal('modal2')">
+                <img src="https://via.placeholder.com/300x200/444/fff?text=CSS+Basics" alt="CSS Basics">
+                <h3>CSS Basics</h3>
+                <p>Click to see more details.</p>
+            </div>
+            <!-- Work 3 -->
+            <div class="work-item" onclick="openModal('modal3')">
+                <img src="https://via.placeholder.com/300x200/666/fff?text=HTML+%2B+CSS" alt="HTML + CSS">
+                <h3>HTML + CSS</h3>
+                <p>Click to see more details.</p>
+            </div>
+            <!-- Work 4 -->
+            <div class="work-item" onclick="openModal('modal4')">
+                <img src="https://via.placeholder.com/300x200/888/fff?text=Final+Activity" alt="Final Activity">
+                <h3>Final Activity</h3>
+                <p>Click to see more details.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 🔹 Popups (Modals) -->
+    <!-- Work 1 -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal1')">&times;</span>
+            <h2>HTML Basics</h2>
+            <p>These are my basic HTML activities. You can view them on my GitHub repository:</p>
+            <a href="https://github.com/eljxei/HTML-BASICS.git" target="_blank" style="color:#00bcd4;font-weight:bold;">
+                🔗 View HTML Basics on GitHub
+            </a>
+        </div>
+    </div>
+
+    <!-- Work 2 -->
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal2')">&times;</span>
+            <h2>CSS Basics</h2>
+            <p>This project demonstrates the use of CSS for styling, colors, layouts, and simple animations.</p>
+            <a href="https://github.com/eljxei/CSS-BASICS-BENESA.git" target="_blank" style="color:#00bcd4;font-weight:bold;">
+                🔗 View CSS Basics on GitHub
+            </a>
+        </div>
+    </div>
+
+    <!-- Work 3 -->
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal3')">&times;</span>
+            <h2>HTML + CSS</h2>
+            <p>This project combines HTML structure with CSS styling to create a complete web page design.</p>
+            <a href="https://github.com/eljxei/HTML-CSS-Activity-BENESA.git" target="_blank" style="color:#00bcd4;font-weight:bold;">
+                🔗 View HTML + CSS Project on GitHub
+            </a>
+        </div>
+    </div>
+
+    <!-- Work 4 -->
+    <div id="modal4" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal4')">&times;</span>
+            <h2>Final Activity</h2>
+            <p>This is my final activity project that applies all my learnings in HTML and CSS to build a professional web design.</p>
+            <a href="https://github.com/eljxei/FINAL-ACTIVITY-BENESA.git" target="_blank" style="color:#00bcd4;font-weight:bold;">
+                🔗 View Final Activity on GitHub
+            </a>
+        </div>
+    </div>
+
+    <!-- 🔹 Script -->
+    <script>
+        function openModal(id) {
+            document.getElementById(id).style.display = "flex";
+        }
+        function closeModal(id) {
+            document.getElementById(id).style.display = "none";
+        }
+        // Close if clicked outside
+        window.onclick = function(event) {
+            const modals = document.querySelectorAll(".modal");
+            modals.forEach(modal => {
+                if (event.target === modal) {
+                    modal.style.display = "none";
+        }
+        });
+        }
+    </script>
+</body>
+</html>
